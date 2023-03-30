@@ -1,0 +1,11 @@
+{
+  "login": {
+    "username": "用户",
+    "password": "密码",
+    "submit": "登陆",
+    "error": {
+      "empty_username": "登陆用户不能为空！",
+      "empty_password": "用户密码不能为空！"
+    }
+  }
+}
