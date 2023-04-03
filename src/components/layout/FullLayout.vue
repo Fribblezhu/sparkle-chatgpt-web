@@ -10,8 +10,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from  'vue'
-import AppFooter  from '@/components/footer/AppFooter.vue'
+import { defineComponent } from 'vue'
+import AppFooter from '@/components/footer/AppFooter.vue'
 
 export default defineComponent({
   components: {
@@ -21,13 +21,15 @@ export default defineComponent({
 </script>
 
 <style scoped>
-  .app-container {
-    height: 100%
-  }
-  .app-main {
-    height: calc(100% - 48px);
-  }
-  .app-footer {
-    height: 48px;
-  }
+.app-container {
+  height: 100%
+}
+
+.app-main {
+  height: calc(100% - 30px);
+}
+
+.app-footer {
+  height: 30px;
+}
 </style>

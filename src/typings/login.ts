@@ -1,10 +1,10 @@
-import { UserInfo } from '@/typings/user'
+import { type UserInfo } from '@/typings/user'
 
 export interface LoginForm {
-    username: string,
-    password: string
+  username: string
+  password: string
 }
 
 export interface LoginResponse {
-    user: UserInfo
+  user: UserInfo
 }

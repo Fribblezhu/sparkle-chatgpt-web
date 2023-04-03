@@ -7,5 +7,29 @@
       "empty_username": "登陆用户不能为空！",
       "empty_password": "用户密码不能为空！"
     }
+  },
+  "chat": {
+    "add_chat": "新增聊天",
+    "chat_list": "聊天列表",
+    "export": "导出当前聊天记录",
+    "export_all": "导出所有聊天记录",
+    "message_empty_tip": "在底部输入框中发起提问吧...",
+    "chat_empty_tip": "请先在右侧发起聊天吧...",
+    "busy_error": "ChatGPT 正在努力回答问题，请耐心等待。",
+    "stop_answer_first": "请先终止当前问题。",
+    "error_secret": "口令错误。",
+    "stop_answer": "停止回答"
+
+  },
+  "user": {
+    "username": "用户名称",
+    "secret": "用户口令",
+    "avatar_url": "用户头像"
+  },
+  "common": {
+    "save": "保存"
+  },
+  "setting": {
+    "title": "修改用户信息"
   }
 }

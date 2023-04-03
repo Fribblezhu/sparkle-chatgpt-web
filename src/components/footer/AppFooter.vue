@@ -1,35 +1,32 @@
 <template>
   <div class="copyright-label">
-    {{ this.systemInfo.copyright}}
+    Copyright by {{ this.systemInfo.copyright }}
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
-import { useStore } from "@/store/store";
+import { useStore } from '@/store/store'
 
 export default defineComponent({
 
-  setup() {
+  setup () {
     const store = useStore()
     return {
-      systemInfo: computed( () => store.state.system.systemInfo)
+      systemInfo: computed(() => store.state.system.systemInfo)
     }
   },
-  data() {
-    return {
-    }
+  data () {
+    return {}
   },
-  computed: {
-
-  }
+  computed: {}
 })
 </script>
 
 <style scoped>
-  .copyright-label {
-    text-align: center;
-    line-height: 48px;
-    font-size: 16px;
-  }
+.copyright-label {
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+}
 </style>

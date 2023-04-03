@@ -4,6 +4,7 @@ const baseUrl = process.env.GATEWAY_URL
 
 module.exports = defineConfig({
   transpileDependencies: true,
+
   configureWebpack: {
     plugins: [
       require('unplugin-vue-components/webpack')({
@@ -14,6 +15,7 @@ module.exports = defineConfig({
       }),
     ],
   },
+
   devServer: {
     open: true,
     port: 7070,
@@ -23,6 +25,13 @@ module.exports = defineConfig({
         changeOrigin: true,
         secure: false
       }
+    }
+  },
+
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: ['*.less']
     }
   }
 })

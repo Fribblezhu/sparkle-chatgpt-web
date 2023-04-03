@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
 
@@ -12,7 +12,7 @@ export default defineComponent({
   },
 
   methods: {
-    getSystemInfo(): void {
+    getSystemInfo (): void {
       this.$store.commit('system/SET_SYSTEM_INFO', {name: '系统管理平台'})
     }
   }
@@ -20,7 +20,10 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style lang="less">
+@import "src/assets/css/highlight.less";
+@import "src/assets/css/github-markdown.less";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,4 +1,5 @@
 export interface UserInfo {
-    username: string,
-    loginName: string
+  username: string
+  avatarUrl: string
+  secret: string
 }

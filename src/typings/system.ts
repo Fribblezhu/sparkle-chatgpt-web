@@ -1,6 +1,5 @@
 export interface System {
-    name?: '',
-    copyright?: '',
-    version?: ''
-
+  name?: ''
+  copyright?: ''
+  version?: ''
 }

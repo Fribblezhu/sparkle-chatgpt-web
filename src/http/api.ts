@@ -1,16 +1,16 @@
 import http from './http'
-import {LoginForm, LoginResponse} from "@/typings/login";
-import {AxiosResponse} from "axios";
+import type { LoginForm, LoginResponse } from '@/typings/login'
+import { type AxiosResponse } from 'axios'
 
 const Api = {
-   login: (form: LoginForm) => {
-       return http.get<any, AxiosResponse<LoginResponse>, LoginForm>(
-           '/login/pwd',
-           {
-               data: form
-           }
-       )
-   }
+  login: async (form: LoginForm) => {
+    return await http.get<any, AxiosResponse<LoginResponse>, LoginForm>(
+      '/login/pwd',
+      {
+        data: form
+      }
+    )
+  }
 }
 
 export default Api

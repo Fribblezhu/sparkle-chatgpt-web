@@ -1,0 +1,43 @@
+version: "3.7"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    hostname: chat-gpt-web
+    container_name: chat-gpt-web
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "10"
+    ports:
+      - "80:80"
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+    environment:
+      - TZ="Asia/Shanghai"
+    links:
+      - api
+    depends_on:
+      - api
+  api:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    restart: always
+    hostname: chat-gpt-api
+    container_name: chat-gpt-api
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "10"
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+      - "./python/main.py:/usr/src/chat/main.py"
+    environment:
+      - TZ="Asia/Shanghai"
+      - OEPNAPI_KEY=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
+      - CHAT_SECRET=sparkle-chatgpt

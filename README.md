@@ -1,24 +1,29 @@
-# sparkle-admin-vue
+# sparkle-Chat-GPT
 
-## Project setup
+### 安装依赖
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install --force
 ```
 
-### Compiles and minifies for production
+### 编译前端
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+vue-cli-service build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 在docker中启动
+```
+docker-compose -f docker-compose.yml up -d
+```
+
+### 在浏览器打开
+```
+http://127.0.0.1:80
+```
+
+### 修改配置
+```
+打开docker-compose.yml：
+    1. openapi 密钥：   OEPNAPI_KEY
+    2. 前端访问密钥： CHAT_SECRET
+```
+
